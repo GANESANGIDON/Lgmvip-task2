@@ -1,0 +1,121 @@
+/* LGM-task2 css */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color:  lavender;
+}
+
+/* navigation bar */
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  padding:  10px 5%;
+  color: white;
+  background-color:  darkcyan;
+  box-shadow: 0px 0px 5px black;
+}
+
+/* nav button */
+.navButton{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+}
+
+.navButton:hover{
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.navButton:active{
+  filter: brightness(120%);
+}
+
+/* container heading */
+#containerHeading{
+  color: darkblue;
+  text-align: center;
+  margin: 20px 0px;
+  position: relative;
+  text-shadow:  0px 2px 3px grey;
+}
+
+#containerHeading:before{
+  content: " ";
+  position: absolute;
+  bottom: -4px;
+  width: 7rem;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition-duration: 0.3s;
+  height: 4px;
+  background-color: darkorange;
+}
+
+#containerHeading:hover:before{
+  transform: scaleX(1);
+}
+
+/* container division */
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+}
+
+/* user data container */
+.card{
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: beige;
+  transition:  0.2s;
+  border-radius: 5px;
+}
+
+.card:hover{
+  box-shadow:  0px 0px 5px grey;
+}
+
+/* user image */
+.image{
+  border-radius: 50%;
+  transition: 0.7s;
+  box-shadow:  0px 0px 5px grey;
+}
+
+.image:hover{
+  border-radius:  0%;
+}
+
+/* user name */
+.userName{
+  margin: 5px;
+}
+
+
+
+/* for mobile and small screen tablets */
+@media(min-width: 481px){
+
+  .container{
+    grid-template-columns: 48% 48%;
+  }
+}
+
+
+/* for tablets and small screen laptops */
+@media(min-width: 768px){
+
+  .container{
+    grid-template-columns: 30% 30% 30%;
+  }
+}
+
